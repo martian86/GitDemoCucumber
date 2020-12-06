@@ -1,0 +1,169 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-02T20:50:58.602Z",
+        "line": 16,
+        "name": "Verify if place is successfully added using AddPlace API",
+        "description": "",
+        "id": "validating-place-apis;verify-if-place-is-successfully-added-using-addplace-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1748996800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Add place payload with \"asdfg qwerty\" \"Kannada\" \"Bangalore\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"asdfg qwerty\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"Kannada\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"Bangalore\"",
+                  "offset": 48
+                }
+              ],
+              "location": "stepdefinitions.stepDefinition.add_place_payload_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2466214900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user calls \"AddPlaceAPI\" with HTTP \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepdefinitions.stepDefinition.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3004900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the response API call is success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 50
+                }
+              ],
+              "location": "stepdefinitions.stepDefinition.the_response_api_call_is_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 631000500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepdefinitions.stepDefinition.verify_in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18993900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify \"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepdefinitions.stepDefinition.verify_in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2974290600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify \"place_id\" and \"name\" maps to \"asdfg qwerty\" using \"GetPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"place_id\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"name\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"asdfg qwerty\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"GetPlaceAPI\"",
+                  "offset": 58
+                }
+              ],
+              "location": "stepdefinitions.stepDefinition.verify_place_id_and_name_maps_to_name_using(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place APIs",
+    "description": "",
+    "id": "validating-place-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidations.feature",
+    "tags": []
+  }
+]
